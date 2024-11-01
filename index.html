@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+        <button id="trashBtn" class="trash-btn">
+            Trash <span id="trashCount" class="trash-count"></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <div class="upload-buttons">
+                <label class="upload-btn">
+                    Upload Images
+                    <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                </label>
+                
+                <form id="urlForm" class="url-form">
+                    <input type="url" id="urlInput" placeholder="Enter image URL">
+                    <button type="submit">Add URL</button>
+                </form>
+            </div>
+            
+            <div id="dropZone" class="drop-zone">
+                <p>Drag and drop images here</p>
+            </div>
+        </section>
+
+        <section id="imageGrid" class="image-grid"></section>
+
+        <section id="trashGrid" class="trash-grid hidden"></section>
+    </main>
+
+    <div id="imageModal" class="modal hidden">
+        <button id="closeModal" class="close-btn">×</button>
+        <button id="prevImage" class="nav-btn prev">❮</button>
+        <img id="modalImage" src="" alt="">
+        <button id="nextImage" class="nav-btn next">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
